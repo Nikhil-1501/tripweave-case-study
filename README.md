@@ -65,6 +65,8 @@ These are the problems that took real debugging, most of them found only by test
 **1. Background GPS silently stopped after the first fix.**
 The app published one position, then nothing, with no crash and no error. The cause was that enabling a wake lock on the foreground service throws a `SecurityException` unless the manifest declares `WAKE_LOCK`, and the location stream quietly never opened. I added the permission and then verified tracking on a genuinely locked phone, confirming it with `adb dumpsys` that the service was still alive rather than trusting the UI.
 
+<p align="center"><img src="screenshots/09-background-tracking.png" width="420" alt="Android notification: TripWeave, Trip in Progress, tracking your journey"><br><sub>The foreground-service notification while tracking with the screen locked.</sub></p>
+
 **2. The release build broke features that worked in debug.**
 In the release (R8-minified) build, App Check failed to load: R8 had stripped Firebase's component constructors. I diagnosed it from logcat (`ComponentDiscovery … NoSuchMethodException`) and wrote ProGuard keep rules. Since then I test every release build, not only debug.
 
