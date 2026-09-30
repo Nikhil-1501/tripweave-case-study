@@ -122,4 +122,4 @@ I can take a Flutter app from idea to Play Store, and I'm strongest at the parts
 - **Release problems:** R8/ProGuard, signing, SHA keys, Play App Signing, blank maps in production
 - **Play Store launch:** Data Safety form, privacy policy, testing tracks
 
-**Contact:** <!-- TODO: add your Upwork / Contra / LinkedIn links and a work email --> · [GitHub](https://github.com/Nikhil-1501)
+**Hire me:** [Upwork](https://www.upwork.com/freelancers/~0198a832f4cfda1c92) · [GitHub](https://github.com/Nikhil-1501)
