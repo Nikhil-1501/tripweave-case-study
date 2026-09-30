@@ -10,7 +10,7 @@
   <img src="screenshots/07-live-map.png" width="260" alt="Live convoy map with four vehicles and a route to the destination">
 </p>
 
-<!-- TODO: add a 30–60s screen recording (join → live map → lock phone → still tracking) as a GIF or YouTube link here -->
+<p align="center"><a href="https://youtube.com/shorts/0cEL2-50uW8"><b>▶ Watch the 45-second demo</b></a></p>
 
 ---
 
@@ -103,7 +103,7 @@ I wrote a small Kotlin platform channel that shows Google's native in-app "Turn 
 - **Dependencies** are scanned against the OSV database and watched by Dependabot.
 - **Privacy policy and terms** are hosted on Firebase Hosting with security headers (CSP, HSTS, no framing) and linked from the app.
 - **Play Store:** upload keystore, Play App Signing, a Data Safety form, a store listing and screenshots, and a signed release live on internal testing.
-- **Trade-off, documented honestly:** a stricter server-side membership check would need Cloud Functions, which require Firebase's paid plan. For this free-tier app I chose to keep the free plan and wrote the trade-off down. I built the stricter version, a membership mirror maintained by a Cloud Function and covered by emulator tests, into a separate starter kit.
+- **Trade-off, documented honestly:** a stricter server-side membership check would need Cloud Functions, which require Firebase's paid plan. For this free-tier app I chose to keep the free plan and wrote the trade-off down. I built the stricter version, a membership mirror maintained by a Cloud Function and covered by emulator tests, into a separate starter kit, [Live Convoy Kit](https://harborkits.gumroad.com/l/tjlbf).
 
 ## Results
 
