@@ -1,7 +1,8 @@
 # Case study: TripWeave — real-time convoy tracking in Flutter + Firebase
 
 **Role:** sole developer. Design, Flutter app, Firebase backend and security rules, Android native code, testing on real devices, and the Play Store release.
-**Timeline:** about 3 months (Jun – Sep 2026), from an empty project to a signed release on Google Play closed testing.
+**Timeline:** about 3 months (Jun – Sep 2026), from an empty project to a signed release on Google Play closed testing; public on Google Play since October 2026.
+**Google Play:** https://play.google.com/store/apps/details?id=com.nikhil.tripweave
 **Stack:** Flutter · Dart · Firebase (Anonymous Auth, Cloud Firestore, Realtime Database, App Check, Hosting) · Google Maps SDK · Kotlin platform channel · OpenStreetMap services (Photon, Nominatim, OSRM)
 
 > The source code is private. This page explains what I built, the hard problems I solved and the decisions behind them.
@@ -102,12 +103,12 @@ I wrote a small Kotlin platform channel that shows Google's native in-app "Turn 
 - **Hardened Android build:** HTTPS only, no cloud backup of app data, no background-location permission (a foreground service is used instead).
 - **Dependencies** are scanned against the OSV database and watched by Dependabot.
 - **Privacy policy and terms** are hosted on Firebase Hosting with security headers (CSP, HSTS, no framing) and linked from the app.
-- **Play Store:** upload keystore, Play App Signing, a Data Safety form, a store listing and screenshots, and a signed release live on closed testing.
+- **Play Store:** upload keystore, Play App Signing, a Data Safety form, a store listing and screenshots, and a signed release that went from closed testing to public production in October 2026.
 - **Trade-off, documented honestly:** a stricter server-side membership check would need Cloud Functions, which require Firebase's paid plan. For this free-tier app I chose to keep the free plan and wrote the trade-off down. I built the stricter version, a membership mirror maintained by a Cloud Function and covered by emulator tests, into a separate starter kit, [Live Convoy Kit](https://harborkits.gumroad.com/l/tjlbf).
 
 ## Results
 
-- A working app on **Google Play closed testing**, signed through Play App Signing.
+- A working app **live on Google Play** (public since October 2026), signed through Play App Signing.
 - **Two-phone field test passed:** join by code, live tracking in both directions, background tracking with the screen locked, updates skipped while stationary and resumed after about 30 m of movement, and a clean leave, with no errors in either phone's logs.
 - About **3,400 lines of Dart**, with unit tests for input validation, trip-code entropy and the moving/stopped logic, and a clean `dart analyze`.
 - **₹0 running cost:** Firebase free tier, OpenStreetMap services, no paid map APIs.
